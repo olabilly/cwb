@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<script src="{% static 'js/script.js' %}"></script>
+    <title>Home | Select your prefered programming language</title>
+</head>
+<body>
+    <header>
+         <h1><img src="{% static 'images/cwblogo.png' %}" alt="CWB"></h1>
+
+         <nav>
+             <a href="{% url 'login' %}" class="login">Login</a>
+             <a href="{% url 'register' %}" class="register">Sign Up</a>
+         </nav>
+    </header>
+    <div class="banner-field">
+        <div class="banner-control">
+             <a href="#">HTML</a>
+             <a href="#">CSS</a>
+             <a href="#">ReactJS</a>
+             <a href="#">React Native</a>
+             <a href="#">JavaScript</a>
+             <a href="#">Django</a>
+             <a href="#">Python</a>
+             <a href="#">Java</a>
+             <a href="#">Sql</a>
+        </div>
+    </div> <hr class="custom-hr" />
+
+    <div class="search-field">
+          <div class="search-box">
+              <h2 style="color: green;">Free simple & easy learning</h2>
+              <form action="#">
+                  <div class="form-field-label">
+                    <input type="text" name="search" placeholder="Search your favoirte tutorials " /><i class="ion-ios-search"></i>
+                  </div>
+              </form>
+              <h5 style="color:#fff;">There's boundless potential for success propel your career to new heights by mastering your preferred coding language</h5>
+          </div>
+    </div><hr class="custom-hr" />
+     
+    <main class="main-content">
+         <h2 style="color: green;">Start Learning</h2>
+         <div class="selected-list">
+            <div class="content">
+                <div class="content-box" style="background-color:#CFE9D0;" onClick="htmlTutorial()">
+                    <Label>Start Learning</Label>
+                    <h4>HTML</h4>
+               </div>
+
+               <div class="content-box" style="background-color:#e79e9e;">
+                    <Label>Start Learning</Label>
+                    <h4>CSS</h4>
+               </div>
+
+                <div class="content-box" style="background-color:#FEFAD8;">
+                     <Label>Start Learning</Label>
+                     <h4>ReactJS</h4>
+                </div>
+
+                <div class="content-box" style="background-color:#FEFAD8;">
+                    <Label>Start Learning</Label>
+                    <h4>React Native</h4>
+               </div>
+
+                <div class="content-box" style="background-color:#348EA4E0;">
+                    <Label>Start Learning</Label>
+                    <h4>JavaScript</h4>
+                </div>
+
+                <div class="content-box" style="background-color:#CFE9D0;">
+                        <Label>Start Learning</Label>
+                        <h4>Django</h4>
+                </div>  
+
+                <div class="content-box" style="background-color:#CFE9D0;">
+                        <Label>Start Learning</Label>
+                        <h4>Python</h4>
+                </div>
+
+                <div class="content-box" style="background-color:#e79e9e;">
+                    <Label>Start Learning</Label>
+                    <h4>Java</h4>
+                </div>
+                <div class="content-box" style="background-color:#FEFAD8;">
+                    <Label>Start Learning</Label>
+                    <h4>SQL</h4>
+                </div>
+
+            </div>
+         </div>
+    </main>
+
+
+
+    <footer>
+         <p>Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Inbox </title>
+</head>
+<body>
+    <header>
+         <h1 class="logo-field"><a href="/"><img src="{% static 'images/cwblogo.png' %}" alt="CWB"></a></h1>
+
+         <nav>
+             <a href="{% url 'login' %}" class="login">Login</a>
+             <a href="{% url 'register' %}" class="register">Sign Up</a>
+         </nav>
+    </header>
+
+    <div class="container">
+          <fieldset>
+            <legend>
+                  <h2>Login</h2>
+            </legend>
+
+            <div class="form-field">
+                <input type="text" placeholder="Username" name="userid" class="form-control">
+            </div>
+            <div class="form-field">
+                <input type="text" placeholder="Username" name="userid" class="form-control">
+            </div>
+            <div class="btn-field">
+                 <button type="submit" class="btn-control">Login</button>
+            </div>
+            <p style="margin-top:10px">Become a memeber <a href="/register">click here</a></p>
+          </fieldset>
+    </div>
+    <footer>
+         <p>Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>
