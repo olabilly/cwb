@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import secrets
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fe25+(e^6=c0^csxec8^0f=5fm6b2-evks-01!4sgc01u=d(hh'
+SECRET_KEY = secrets.token_hex(50)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -117,18 +118,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+# Set STATIC_ROOT to navigate to staticfiles directory
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    # Add paths to additional directories here, for example:
-    
-]
-
-
+# URL prefix for static files
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Enable HTTP Strict Transport Security (HSTS)
+SECURE_HSTS_SECONDS = 31536000  # One year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Redirect non-SSL requests to SSL
+SECURE_SSL_REDIRECT = True
+
+# Set secure flags for session and CSRF cookies
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
