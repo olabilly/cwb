@@ -10,7 +10,7 @@ source .venv/Scripts/activate
 # cd /path/to/your/project
 
 # Pull the latest changes from your Git repository
-git pull origin main
+git pull
 
 # Install or update Python dependencies
 pip install -r requirements.txt
