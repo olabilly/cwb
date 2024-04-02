@@ -134,7 +134,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 # Redirect non-SSL requests to SSL
-SECURE_SSL_REDIRECT = False
+# SECURE_SSL_REDIRECT = False
 
 # Set secure flags for session and CSRF cookies
 SESSION_COOKIE_SECURE = True
