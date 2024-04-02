@@ -13,10 +13,10 @@ source .venv/Scripts/activate
 git pull
 
 # Install or update Python dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Collect static files
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
 # Migrate database changes
 python3 manage.py migrate
