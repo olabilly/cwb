@@ -27,7 +27,7 @@ SECRET_KEY = secrets.token_hex(50)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['164.92.83.205']
 
 
 # Application definition
