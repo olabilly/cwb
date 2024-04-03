@@ -121,7 +121,7 @@ USE_TZ = True
 # Set STATIC_ROOT to navigate to staticfiles directory
 
 # URL prefix for static files
-STATIC_URL = '/var/www/html/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -129,13 +129,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Enable HTTP Strict Transport Security (HSTS)
-SECURE_HSTS_SECONDS = 31536000  # One year
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_SECONDS = 31536000  # One year
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
 
-# Redirect non-SSL requests to SSL
-# SECURE_SSL_REDIRECT = False
+# # Redirect non-SSL requests to SSL
+# # SECURE_SSL_REDIRECT = False
 
-# Set secure flags for session and CSRF cookies
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# # Set secure flags for session and CSRF cookies
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True

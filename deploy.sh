@@ -4,7 +4,7 @@
 sudo systemctl stop gunicorn
 
 # Activate your virtual environment (if any)
-source .venv/Scripts/activate
+# source .venv/Scripts/activate
 
 # Navigate to your project directory
 # cd /path/to/your/project
